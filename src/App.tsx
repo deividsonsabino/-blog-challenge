@@ -1,10 +1,12 @@
+import { Fragment } from "react/jsx-runtime"
+import GlobalStyle from "./globalStyles"
 
 function App() {
 
   return (
-    <div>
-      Hello World
-    </div>
+    <Fragment>
+      <GlobalStyle/>
+    </Fragment>
   )
 }
 
