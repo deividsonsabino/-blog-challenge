@@ -5,18 +5,18 @@ export const InputContainer = styled.div`
     position: relative;
 
     svg {
+        width: 48px;
         position: absolute;
         left: 0;
-
-        margin: 12px;
+        padding: 10px;
     }
 `
 
 export const Input = styled.input`
+    text-indent: 60px;
     @media ${device.sm} {
         width: 327px;
         height: 50px;
-        text-indent: 60px;
         font-size: 14px;
     }
 
@@ -28,7 +28,6 @@ export const Input = styled.input`
     @media ${device.lg} {
         width: 1216px;
         font-size: 20px;
-        text-indent: 60px;
     }
     
     height: 64px;
@@ -46,5 +45,9 @@ export const Input = styled.input`
     border-radius: 8px;
     border-color: var(--dark-40);
     border: 2px;
+
+    &:focus {
+        border: 2px solid var(--brand-color);
+    }
 
 `
