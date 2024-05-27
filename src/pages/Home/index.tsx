@@ -1,4 +1,5 @@
 import { CardBlog, HeaderComponent } from "./components";
+import { PageContainer, Container } from "./style";
 
 const posts = [
     {
@@ -23,12 +24,18 @@ const posts = [
 
 function HomePage() {
     return (
-        <div>
+        <PageContainer>
             <HeaderComponent />
-            {posts.map(post => 
-                <CardBlog {...post} />
-            )}
-        </div>
+
+            <Container>
+                {posts.map(post =>
+                    <CardBlog {...post} />
+                )}
+            </Container>
+        </PageContainer>
+
+
+
     )
 }
 

@@ -1,4 +1,4 @@
-import { HeartIcon } from "../../../../assets/Icons";
+import HeartIconButton from "../HeartIconButton";
 import { Card, CardContent, CardHeader, Date, CardTitle, CardSDescription } from "./style";
 
 export interface CardBlogProps {
@@ -14,7 +14,7 @@ function CardBlog(props: CardBlogProps) {
             <CardContent>
                 <CardHeader>
                     <Date>{props.date}</Date>
-                    <HeartIcon />
+                    <HeartIconButton isLiked={props.isLiked} />
                 </CardHeader>
                 <CardTitle>
                     {props.title}
