@@ -1,13 +1,32 @@
+import { SearchInput } from "../../../../Interfaces";
 import { SearchIcon } from "../../../../assets/Icons"
 import { Input, InputContainer } from "./style"
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-}
 
-function InputComponent(props: InputProps) {
+function InputComponent(props: SearchInput) {
+
+    function filterPosts(value: string) {
+        let filtered = props.posts;
+        if (value === '') {
+            filtered = props.posts.filter(post => post.filtered = true)
+            props.setPostsList(filtered)
+        } else {
+            filtered = props.posts.filter(post => {
+                if (post.description.toLowerCase().includes(value) || post.title.toLowerCase().includes(value)) {
+                    post.filtered = true
+                } else {
+                    post.filtered = false
+                }
+                return props.posts;
+            })
+            props.setPostsList(filtered)
+        }
+    }
+
     return (
         <InputContainer>
             <Input
-                placeholder={props.placeholder}
+                onChange={(e) => filterPosts(e.target.value)}
+                {...props}
             />
             <SearchIcon />
         </InputContainer>

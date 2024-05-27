@@ -38,6 +38,7 @@ export const Card = styled.div`
     border-radius: 8px;
 
     &:hover {
+        transition-duration: 1s;
         border: 2px solid var(--brand-color);
     }
 `
