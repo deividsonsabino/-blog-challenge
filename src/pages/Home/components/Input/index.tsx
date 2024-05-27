@@ -1,6 +1,5 @@
-import { Input, InputContainer } from "./style"
 import { SearchIcon } from "../../../../assets/Icons"
-
+import { Input, InputContainer } from "./style"
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
