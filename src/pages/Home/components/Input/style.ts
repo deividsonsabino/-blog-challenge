@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-display:flex;
-align-items: center;
+    //width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     svg {
+        left: 0;
         position: absolute;
-        padding:0 20px ;
+        padding: 20px;
     }
 
 `
 
 export const Input = styled.input`
+    width: 1216px;
     background-color: var(--dark-30);
     color: var(--dark-60);
-    width: 1216px;
+
     height: 64px;
 
     font-size: 20px;
@@ -26,5 +30,4 @@ export const Input = styled.input`
     border: 2px;
 
     text-indent: 60px;
-
 `
